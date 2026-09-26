@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content=“エシカルフードバンコク。新鮮・安心な食で、農家さんと子供たちを笑顔に。タイにお住いのご家族の皆さまに、新鮮野菜、日本米、平飼い卵、鶏肉、豚肉をお届けします。"
+  />
+  <title>Ethical Food Bangkok｜新鮮・安心な食をバンコクへ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --color-green: #536b50;
+      --color-green-dark: #344a35;
+      --color-green-light: #e8eee4;
+      --color-cream: #f8f6f0;
+      --color-beige: #e8dfcf;
+      --color-brown: #8b7355;
+      --color-text: #30352f;
+      --color-text-light: #6f756b;
+      --color-white: #ffffff;
+      --shadow-soft: 0 12px 35px rgba(49, 63, 45, 0.08);
+      --radius-large: 22px;
+      --radius-medium: 12px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--color-text);
+      background: var(--color-white);
+      font-family: "Noto Sans JP", sans-serif;
+      line-height: 1.8;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-label {
+      margin-bottom: 12px;
+      color: var(--color-green);
+      font-family: "Playfair Display", serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--color-green-dark);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.45;
+    }
+
+    .section-lead {
+      max-width: 650px;
+      margin-top: 22px;
+      color: var(--color-text-light);
+      font-size: 0.98rem;
+    }
+
+    .section-heading {
+      margin-bottom: 52px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 12px 27px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--color-white);
+      background: var(--color-green);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-green-dark);
+    }
+
+    .btn-light {
+      color: var(--color-green-dark);
+      background: var(--color-white);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(83, 107, 80, 0.45);
+      color: var(--color-green-dark);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      color: var(--color-white);
+      background: var(--color-green);
+    }
+
+    /* Header */
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      color: var(--color-white);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .logo-main {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-sub {
+      margin-top: 4px;
+      font-size: 0.58rem;
+      letter-spacing: 0.16em;
+      opacity: 0.85;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 0.82rem;
+    }
+
+    .main-nav a {
+      opacity: 0.92;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 1;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 8px;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    .language-switcher span {
+      opacity: 0.65;
+    }
+
+    .language-switcher .active {
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    .header-line-btn {
+      min-height: 40px;
+      padding: 8px 18px;
+      font-size: 0.76rem;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 780px;
+      color: var(--color-white);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(30, 47, 31, 0.72) 0%,
+          rgba(30, 47, 31, 0.45) 46%,
+          rgba(30, 47, 31, 0.15) 100%
+        ),
+        url("images/hero.jpg")
+        center / cover;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      padding-top: 70px;
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 25px;
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      opacity: 0.9;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 5vw, 4.8rem);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 1.35;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-description {
+      max-width: 530px;
+      margin-top: 30px;
+      font-size: 1rem;
+      line-height: 2;
+      opacity: 0.92;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .hero-note {
+      position: absolute;
+      right: 40px;
+      bottom: 34px;
+      max-width: 260px;
+      font-size: 0.72rem;
+      line-height: 1.7;
+      text-align: right;
+      opacity: 0.8;
+    }
+
+    /* Intro */
+    .intro {
+      background: var(--color-cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .intro-image {
+      min-height: 500px;
+      border-radius: var(--radius-large);
+      background:
+        url("images/aboutus.jpg")
+        center / cover;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .intro-content p {
+      margin-top: 25px;
+      color: var(--color-text-light);
+      font-size: 1rem;
+    }
+
+    .intro-message {
+      margin-top: 30px;
+      padding-left: 22px;
+      border-left: 3px solid var(--color-green);
+      color: var(--color-green-dark);
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.9;
+    }
+
+    /* Products */
+    .products {
+      background: var(--color-white);
+    }
+
+    .products-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      border: 1px solid #edf0e9;
+      border-radius: var(--radius-medium);
+      background: var(--color-white);
+      box-shadow: var(--shadow-soft);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(49, 63, 45, 0.12);
+    }
+
+    .product-image {
+      aspect-ratio: 1 / 1.05;
+    }
+
+    .product-card:nth-child(1) .product-image {
+      background:
+        url("images/vegetabales.jpg")
+        center / cover;
+    }
+
+    .product-card:nth-child(2) .product-image {
+      background:
+        url("images/rice.jpg")
+        center / cover;
+    }
+
+    .product-card:nth-child(3) .product-image {
+      background:
+        url("images/eggs.jpg")
+        center / cover;
+    }
+
+    .product-card:nth-child(4) .product-image {
+      background:
+        url("images/chicken.jpg")
+        center / cover;
+    }
+
+    .product-card:nth-child(5) .product-image {
+      background:
+        url("images/pork.jpg")
+        center / cover;
+    }
+
+    .product-info {
+      padding: 20px 18px 23px;
+    }
+
+    .product-number {
+      color: var(--color-brown);
+      font-family: "Playfair Display", serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    .product-name {
+      margin-top: 6px;
+      color: var(--color-green-dark);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .product-description {
+      margin-top: 8px;
+      color: var(--color-text-light);
+      font-size: 0.78rem;
+      line-height: 1.7;
+    }
+
+    /* Values */
+    .values {
+      background: var(--color-green-light);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .value-card {
+      padding: 35px 30px;
+      border-radius: var(--radius-medium);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .value-number {
+      color: var(--color-brown);
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+    }
+
+    .value-title {
+      margin-top: 18px;
+      color: var(--color-green-dark);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .value-text {
+      margin-top: 15px;
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Flow */
+    .flow {
+      background: var(--color-cream);
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      counter-reset: flow;
+    }
+
+    .flow-card {
+      position: relative;
+      padding: 35px 30px;
+      border-radius: var(--radius-medium);
+      background: var(--color-white);
+    }
+
+    .flow-card::before {
+      counter-increment: flow;
+      content: "0" counter(flow);
+      color: var(--color-brown);
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+    }
+
+    .flow-title {
+      margin-top: 18px;
+      color: var(--color-green-dark);
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .flow-text {
+      margin-top: 12px;
+      color: var(--color-text-light);
+      font-size: 0.88rem;
+    }
+
+    /* FAQ */
+    .faq {
+      background: var(--color-white);
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      padding: 25px 0;
+      border-bottom: 1px solid #e7ebe3;
+    }
+
+    .faq-question {
+      color: var(--color-green-dark);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .faq-answer {
+      margin-top: 12px;
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 90px 0;
+      color: var(--color-white);
+      background:
+        linear-gradient(
+          100deg,
+          rgba(52, 74, 53, 0.96),
+          rgba(83, 107, 80, 0.9)
+        ),
+        url("images/hero.jpg")
+        center / cover;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .cta-title {
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .cta-text {
+      margin-top: 15px;
+      font-size: 0.92rem;
+      opacity: 0.88;
+    }
+
+    .cta-actions {
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 55px 0 25px;
+      color: #dce4d8;
+      background: #293b2b;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand .logo-main {
+      font-size: 1.25rem;
+    }
+
+    .footer-description {
+      max-width: 330px;
+      margin-top: 18px;
+      color: #aebcad;
+      font-size: 0.8rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+      color: #c7d2c2;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      color: #93a590;
+      font-size: 0.7rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .main-nav {
+        gap: 15px;
+      }
+
+      .header-line-btn {
+        display: none;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .intro-grid {
+        gap: 45px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 75px 0;
+      }
+
+      .container {
+        width: min(100% - 30px, var(--max-width));
+      }
+
+      .site-header {
+        position: absolute;
+      }
+
+      .header-inner {
+        min-height: 70px;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .logo-main {
+        font-size: 1.05rem;
+      }
+
+      .hero {
+        min-height: 720px;
+        background-position: 60% center;
+      }
+
+      .hero-content {
+        padding-top: 50px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.1rem, 10vw, 3.3rem);
+      }
+
+      .hero-description {
+        font-size: 0.9rem;
+      }
+
+      .hero-note {
+        right: 20px;
+        bottom: 20px;
+        font-size: 0.65rem;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .intro-image {
+        min-height: 330px;
+      }
+
+      .products-heading {
+        display: block;
+      }
+
+      .products-heading .btn {
+        margin-top: 25px;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .product-info {
+        padding: 16px 14px 19px;
+      }
+
+      .product-name {
+        font-size: 0.9rem;
+      }
+
+      .product-description {
+        font-size: 0.74rem;
+      }
+
+      .values-grid,
+      .flow-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .value-card,
+      .flow-card {
+        padding: 27px 24px;
+      }
+
+      .cta-inner {
+        display: block;
+      }
+
+      .cta-actions {
+        margin-top: 30px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-nav {
+        margin-top: 30px;
+      }
+
+      .footer-bottom p + p {
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Ethical Food Bangkok">
+        <span class="logo-main">Ethical Food Bangkok</span>
+        <span class="logo-sub">Freshness with Purpose</span>
+      </a>
+
+      <nav class="main-nav" aria-label="メインナビゲーション">
+        <a href="#about">私たちについて</a>
+        <a href="#products">商品</a>
+        <a href="#values">大切にしていること</a>
+        <a href="#flow">ご利用の流れ</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switcher" aria-label="言語選択">
+          <span class="active">JP</span>
+          <span>EN</span>
+          <span>TH</span>
+        </div>
+
+        <a
+          href="https://lin.ee/8s5G3P2"
+          class="btn btn-light header-line-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          公式LINE
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">エシカルフードバンコク</p>
+
+          <h1 class="hero-title">
+            <span>新鮮・安心な食で</span>
+            <span>農家さんと子供たちを笑顔に</span>
+          </h1>
+
+          <p class="hero-description">
+            タイにお住まいのご家族の皆さまに、選び抜いた食材を。<br />
+            生産者とのつながりを大切にしながら、
+            毎日の食卓に新鮮さと安心をお届けします。
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-light">
+              取扱商品を見る
+            </a>
+
+            <a
+              href="https://lin.ee/8s5G3P2"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              公式LINEに登録する
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-note">
+        Fresh food, trusted relationships,<br />
+        a better future for families.
+      </p>
+    </section>
+
+    <section class="section intro" id="about">
+      <div class="container intro-grid">
+        <div class="intro-image" role="img" aria-label="農場で育つ新鮮な野菜"></div>
+
+        <div class="intro-content">
+          <div class="section-heading">
+            <p class="section-label">About Us</p>
+            <h2 class="section-title">
+              食を通して、農家さんと子供たちの、笑顔の先にある未来まで考える。
+            </h2>
+          </div>
+
+          <p>
+            エシカルフードバンコクは、タイにお住まいのご家族のみなさまへ、
+            新鮮で品質にこだわった食材をお届けしています。
+          </p>
+
+          <p>
+            私たちは、食材そのものの品質だけでなく、
+            その食材がどこから来て、誰によって育てられ、
+            どのように食卓へ届くのかを大切にしています。
+          </p>
+
+          <p class="intro-message">
+            生産者にも、食べる人にも<br />
+            よりよい食のつながりを。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section-heading products-heading">
+          <div>
+            <p class="section-label">Our Products</p>
+            <h2 class="section-title">毎日の食卓の笑顔のために。</h2>
+            <p class="section-lead">
+              日本と異なる環境で、毎日の食がストレスにならないように日本の品種を取り揃え、品質にこだわりながら、農家さんとの繋がりを大切にしています。
+            </p>
+          </div>
+
+          <a 
+           href="https://lin.ee/8s5G3P2"
+           class="btn btn-outline"
+           target="_blank"
+           rel="noopener noreferrer"
+          >
+           商品について相談する
+        </a>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+              <p class="product-number">01</p>
+              <h3 class="product-name">野菜</h3>
+              <p class="product-description">
+                農家さんから直接仕入れた新鮮な野菜
+              </p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+              <p class="product-number">02</p>
+              <h3 class="product-name">日本米</h3>
+              <p class="product-description">
+                チェンライ県から直送のオリジナルブランド米
+              </p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+              <p class="product-number">03</p>
+              <h3 class="product-name">平飼い卵</h3>
+              <p class="product-description">
+                ホルモン剤・抗生物質を使用していない平飼い卵
+              </p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+              <p class="product-number">04</p>
+              <h3 class="product-name">鶏肉</h3>
+              <p class="product-description">
+                ホルモン剤・抗生物質を使用していない鶏肉
+              </p>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+              <p class="product-number">05</p>
+              <h3 class="product-name">豚肉</h3>
+              <p class="product-description">
+                ホルモン剤・抗生物質を使用していない豚肉
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section values" id="values">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Our Values</p>
+          <h2 class="section-title">私たちが大切にしていること</h2>
+          <p class="section-lead">
+            食を作る農家さんに利益を還元し、ご家族みなさまの健康を考え、さらに地球環境や動物福祉にも配慮する。そんな三方よしの事業を目指しています。
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <p class="value-number">01 / Fairness</p>
+            <h3 class="value-title">農家さんとのつながり</h3>
+            <p class="value-text">
+              農家さんから直接仕入れることで、中間業者を省き、その分の利益を生産者へ還元することを目指しています。
+            </p>
+          </article>
+
+          <article class="value-card">
+            <p class="value-number">02 / Quality</p>
+            <h3 class="value-title">品質へのこだわり</h3>
+            <p class="value-text">
+              食材ごとの品質や生産背景を確認し、
+              ご家庭で安心して選んでいただける食品を取り扱っています。
+            </p>
+          </article>
+
+          <article class="value-card">
+            <p class="value-number">03 / Sustainability</p>
+            <h3 class="value-title">地球環境への配慮</h3>
+            <p class="value-text">
+              地球環境や動物福祉の観点から商品を選び、生産・配達・消費までの流れの中で環境負荷を抑えることを意識しています。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flow" id="flow">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">How to Order</p>
+          <h2 class="section-title">ご利用の流れ</h2>
+          <p class="section-lead">
+            ご注文や商品についてのお問い合わせは、
+            公式LINEから受け付けています。
+          </p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card">
+            <h3 class="flow-title">公式LINEに登録</h3>
+            <p class="flow-text">
+              下記のボタンから公式LINEへ登録してください。
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <h3 class="flow-title">商品・数量を相談</h3>
+            <p class="flow-text">
+              ご希望の商品や数量、配送についてLINEでご相談ください。
+            </p>
+          </article>
+
+          <article class="flow-card">
+            <h3 class="flow-title">ご注文・お届け</h3>
+            <p class="flow-text">
+              内容を確認後、ご注文を確定し、ご指定の場所へお届けします。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">FAQ</p>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3 class="faq-question">注文はどこからできますか？</h3>
+            <p class="faq-answer">
+              ご注文は公式LINEから受け付けています。
+              商品や数量についてもお気軽にご相談ください。
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3 class="faq-question">どのエリアに配送できますか？</h3>
+            <p class="faq-answer">
+              配送エリアや配送料については、公式LINEからお問い合わせください。
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3 class="faq-question">取り扱い商品以外も相談できますか？</h3>
+            <p class="faq-answer">
+              在庫や仕入れ状況によって対応できる場合があります。
+              ご希望の商品があればお気軽にご相談ください。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="line">
+      <div class="container cta-inner">
+        <div>
+          <h2 class="cta-title">
+            毎日の食卓に、<br />
+            新鮮と安心を。
+          </h2>
+          <p class="cta-text">
+            商品やご注文について、公式LINEからお気軽にお問い合わせください。
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a
+            href="https://lin.ee/8s5G3P2"
+            class="btn btn-light"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            公式LINEに登録する
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-main">Ethical Food Bangkok</span>
+            <span class="logo-sub">Freshness with Purpose</span>
+          </div>
+
+          <p class="footer-description">
+            新鮮・安心な食で、農家さんと子供たちを笑顔に。
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="#about">私たちについて</a>
+          <a href="#products">商品</a>
+          <a href="#values">大切にしていること</a>
+          <a href="#flow">ご利用の流れ</a>
+          <a href="#faq">FAQ</a>
+          <a href="#line">お問い合わせ</a>
+          <a href="terms.html">利用規約</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ethical Food Bangkok. All Rights Reserved.</p>
+        <p>Bangkok, Thailand</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
