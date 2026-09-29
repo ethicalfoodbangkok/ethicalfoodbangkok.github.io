@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content=“エシカルフードバンコク。新鮮・安心な食で、農家さんと子供たちを笑顔に。タイにお住いのご家族の皆さまに、新鮮野菜、日本米、平飼い卵、鶏肉、豚肉をお届けします。"
+    content="エシカルフードバンコク。新鮮・安心な食で、農家さんと子供たちを笑顔に。タイにお住いのご家族の皆さまに、新鮮野菜、日本米、平飼い卵、鶏肉、豚肉をお届けします。"
   />
   <title>Ethical Food Bangkok｜新鮮・安心な食をバンコクへ</title>
 
@@ -612,6 +612,39 @@
       font-size: 0.7rem;
     }
 
+
+    /* Instagram */
+    .instagram-section {
+      background: var(--color-cream);
+    }
+
+    .instagram-container {
+      width: min(100%, 540px);
+      margin: 0 auto;
+    }
+
+    .instagram-container .instagram-media {
+      width: 100% !important;
+      max-width: 540px !important;
+      min-width: 0 !important;
+      margin: 0 auto !important;
+    }
+
+    .instagram-follow {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .instagram-section .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .instagram-container .instagram-media {
+        min-width: 0 !important;
+      }
+    }
+
     /* Responsive */
     @media (max-width: 1000px) {
       .main-nav {
@@ -1043,6 +1076,52 @@
       </div>
     </section>
 
+
+    <!-- Instagram -->
+    <section class="section instagram-section" id="instagram">
+      <div class="container">
+        <div class="section-heading" style="text-align: center;">
+          <p class="section-label">Follow Us</p>
+          <h2 class="section-title">Instagram</h2>
+          <p class="section-lead" style="margin-left: auto; margin-right: auto;">
+            日々の入荷情報や商品、生産者とのつながりをInstagramでご紹介しています。
+          </p>
+        </div>
+
+        <div class="instagram-container">
+          <blockquote
+            class="instagram-media"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/p/DYlaq6sGhO4/"
+            data-instgrm-version="14"
+            style="background:#fff; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:0 auto; padding:0; width:100%;"
+          >
+            <div style="padding:16px;">
+              <a
+                href="https://www.instagram.com/p/DYlaq6sGhO4/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="text-decoration:none;"
+              >
+                この投稿をInstagramで見る
+              </a>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="instagram-follow">
+          <a
+            href="https://www.instagram.com/ethical_food_bkk/"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagramをフォローする
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="cta" id="line">
       <div class="container cta-inner">
         <div>
@@ -1101,5 +1180,6 @@
       </div>
     </div>
   </footer>
+  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
